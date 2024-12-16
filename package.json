@@ -1,0 +1,42 @@
+{
+  "name": "travel-tests",
+  "version": "0.0.1",
+  "description": "Automation tests for travel site",
+  "author": "Damian Grys",
+  "license": "ISC",
+  "homepage": "https://github.com/mr-buongiorno/travel-tests#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mr-buongiorno/travel-tests.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mr-buongiorno/travel-tests/issues"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test:ui": "npx playwright test --ui",
+    "test:all": "npx playwright test",
+    "test:pl": "npx playwright test --project=travelplanet.pl",
+    "test:hu": "npx playwright test --project=invia.hu",
+    "test:sk": "npx playwright test --project=invia.sk",
+    "test:cz": "npx playwright test --project=invia.cz",
+    "test:report": "npx playwright show-report",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^3.11.2",
+    "@eslint/js": "^9.16.0",
+    "@faker-js/faker": "^9.3.0",
+    "@playwright/test": "^1.49.1",
+    "@types/node": "^22.10.2",
+    "@typescript-eslint/eslint-plugin": "^8.18.0",
+    "@typescript-eslint/parser": "^8.18.0",
+    "dotenv": "^16.4.7",
+    "eslint": "^9.16.0",
+    "globals": "^15.13.0",
+    "prettier": "3.4.2",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.18.0"
+  }
+}
