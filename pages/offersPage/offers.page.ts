@@ -1,12 +1,14 @@
 import type { Page } from '@playwright/test'
+import type {
+  SearchParameters,
+} from '../../helpers/adressGeneratorHelper'
+import {
+  generateOffersListLink,
+} from '../../helpers/adressGeneratorHelper'
 import HeaderTopMenuComponent from '../components/headerTopMenu.component'
 import LoginModalComponent from '../components/logInModal.component'
 import MainSearchFormComponent from '../components/mainSearchForm.component'
 import SearchFormResultsBoxesComponent from './components/searchFormResultsBoxes.component'
-import {
-  generateOffersListLink,
-  SearchParameters,
-} from '../../helpers/adressGeneratorHelper'
 
 export default class OffersPage {
   private headerTopMenuComponent: HeaderTopMenuComponent

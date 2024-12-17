@@ -1,5 +1,5 @@
 import type { Page } from '@playwright/test'
-import { getElementIndex } from '../../helpers/elementHelpers'
+import type { DateInput } from '../../helpers/types'
 
 export default class MainSearchFormComponent {
   private page
@@ -38,7 +38,7 @@ export default class MainSearchFormComponent {
       this.Elements.destinationContent()
         .locator('.i-checkbox__input')
         .nth(elementIndex),
-    dayButton: (day: number, month: number, year: number) =>
+    dayButton: (day: string, month: string, year: string) =>
       this.page.locator(`#datepicker-calendar-day-${day}-${month}-${year}`),
     saveDateButton: () =>
       this.page.getByTestId('sf-datepicker-popup-save-button'),
@@ -79,7 +79,7 @@ export default class MainSearchFormComponent {
     await this.Elements.dateInput().click()
   }
 
-  async clickSpecifiedDay(day: number, month: number, year: number) {
+  async clickSpecifiedDay(day: string, month: string, year: string) {
     await this.Elements.dayButton(day, month, year).click()
   }
 
@@ -88,8 +88,8 @@ export default class MainSearchFormComponent {
   }
 
   async chooseTravelDatesRange(dateRange: {
-    startDate: { day: number; month: number; year: number }
-    endDate: { day: number; month: number; year: number }
+    startDate: DateInput
+    endDate: DateInput
   }) {
     await this.clickDateInput()
     await this.clickSpecifiedDay(

@@ -22,6 +22,7 @@ export const offerDetailsTest = base.extend<OfferDetailsFixtures>({
     use(offersDetailsPage)
   },
 
+  // eslint-disable-next-line no-empty-pattern
   offersDetailsData: async ({}, use, testInfo) => {
     const projectName: string = testInfo.project.name
     const getCountryDomain = getCountry(projectName)

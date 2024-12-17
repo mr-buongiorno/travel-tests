@@ -37,6 +37,7 @@ export const homePageTest = base.extend<HomePageFixtures>({
     const homePage = new HomePage(page)
     use(homePage)
   },
+  // eslint-disable-next-line no-empty-pattern
   pageTranslations: async ({}, use, testInfo) => {
     const projectName: string = testInfo.project.name
     const getCountryDomain = getCountry(projectName)
@@ -49,6 +50,7 @@ export const negativeLoginTest = base.extend<LoginFixtures>({
     const homePage = new HomePage(page)
     use(homePage)
   },
+  // eslint-disable-next-line no-empty-pattern
   errorLoginTranslations: async ({}, use, testInfo) => {
     const projectName: string = testInfo.project.name
     const getCountryDomain = getCountry(projectName)
@@ -61,6 +63,8 @@ export const searchTravelTest = base.extend<SearchTravelFixtures>({
     const homePage = new HomePage(page)
     use(homePage)
   },
+
+  // eslint-disable-next-line no-empty-pattern
   searchTravelTranslations: async ({}, use, testInfo) => {
     const projectName: string = testInfo.project.name
     const getCountryDomain = getCountry(projectName)
@@ -71,6 +75,7 @@ export const searchTravelTest = base.extend<SearchTravelFixtures>({
     use(offersPage)
   },
 
+  // eslint-disable-next-line no-empty-pattern
   offersListData: async ({}, use, testInfo) => {
     const projectName: string = testInfo.project.name
     const getCountryDomain = getCountry(projectName)

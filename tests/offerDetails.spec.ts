@@ -8,8 +8,8 @@ offerDetailsTest.beforeEach(async ({ offersPage }, testInfo) => {
   const getCountryValue: Languages = getCountry(testInfo.project.name)
   await offersPage.visitOffersPage({
     language: getCountryValue,
-    startDate: { day: 24, month: 12, year: 2024 },
-    endDate: { day: 27, month: 12, year: 2024 },
+    startDate: { day: '24', month: '12', year: '2024' },
+    endDate: { day: '27', month: '12', year: '2024' },
     pageNumber: 2,
   })
 })

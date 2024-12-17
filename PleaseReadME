@@ -1,0 +1,17 @@
+First of all, thank you guys for participating in an interesting task.
+
+I need to leave some comments related to this task. I have made this project as flexible as possible, so you can run all travel projects in one command. 
+
+All Page Objects are divided into components because in the past I had problems with maintenance pages with above 1000 lines of code. It is hard to read.
+
+Putting locators in Elements objects gives you some opportunities to modify text inside locators. Especially it is helpful with changing locators e.g. containing dates.
+
+I set a linter, so it is really helpful to maintain better code formatting.
+
+If we talk about tests. I use soft assertions because it do not end the test after the first fail.
+It is really difficult to test pages with dynamic content and which we do not have control on it. So a better way would be just to inject some data using API.
+Problems with page content were e.g. changing prices of travel, changing offers list or even in some cases. So some tests would fail.
+
+If it is possible, please write me a complex review, because it is for me very important to write better code and tests.
+
+All the best!!

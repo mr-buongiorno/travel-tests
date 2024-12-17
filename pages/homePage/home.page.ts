@@ -1,4 +1,5 @@
 import type { Page } from '@playwright/test'
+import type { DateInput } from '../../helpers/types'
 import HeaderTopMenuComponent from '../components/headerTopMenu.component'
 import LoginModalComponent from '../components/logInModal.component'
 import MainSearchFormComponent from '../components/mainSearchForm.component'
@@ -38,8 +39,8 @@ export default class HomePage {
   async searchTravel(searchTravelParameters: {
     destinationCountry: string
     destinationPlacesToCheck: number[]
-    startDate: { day: number; month: number; year: number }
-    endDate: { day: number; month: number; year: number }
+    startDate: DateInput
+    endDate: DateInput
   }) {
     await this.mainSearchForm.chooseDestinationCountryAndPlace(
       searchTravelParameters.destinationCountry,

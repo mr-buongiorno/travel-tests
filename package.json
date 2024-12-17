@@ -22,7 +22,7 @@
     "test:cz": "npx playwright test --project=invia.cz",
     "test:report": "npx playwright show-report",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
+    "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^3.11.2",

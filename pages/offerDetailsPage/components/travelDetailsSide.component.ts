@@ -24,7 +24,6 @@ export default class TravelDetailsSideComponent {
     adultAmountValueText: () =>
       this.Elements.mainElement().locator('.b-summary-info__inner').nth(5),
 
-    //tutajdobrze
     roomTypeValueText: () =>
       this.Elements.mainElement().locator('.b-summary-info__inner').nth(6),
     travelOrganizerValueText: () =>
